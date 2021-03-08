@@ -1,0 +1,7 @@
+*.testsettings
+*.sln
+*.vsmdi
+*.csproj
+Properties
+obj
+bin
