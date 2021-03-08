@@ -5,3 +5,5 @@
 Properties
 obj
 bin
+TestResults
+*.trx

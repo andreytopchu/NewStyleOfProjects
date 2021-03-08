@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FigureLib
+namespace ObjectsLib
 {
     public class Triangle: Figure
     {
@@ -14,14 +14,20 @@ namespace FigureLib
 
         public Triangle(double a, double b, double c)
         {
-            if (a + b > c && a + c > b && b + c > a)
+            if (a >= 0 && b >= 0 && c >= 0)
             {
-                this.A = a;
-                this.B = b;
-                this.C = c;
+                if (a + b > c && a + c > b && b + c > a)
+                {
+                    this.A = a;
+                    this.B = b;
+                    this.C = c;
+                }
+                else
+                    throw new ArgumentException("Ошибка! Неверно введены параметры для создания фигуры.");
             }
             else
-                throw new ArgumentException("Ошибка! Неверно введены параметры для создания фигуры.");
+                throw new ArgumentException("Стороны не могут быть отрицательными или равны нулю!");
+            
         }
 
         public override double CalcArea()
@@ -37,7 +43,7 @@ namespace FigureLib
 
         public override string ToString()
         {
-            return "Треугольник со сторонами " + this.A+", "+this.B+" и "+this.C;
+            return "Треугольник со сторонами: " + this.A+", "+this.B+" и "+this.C;
         }
 
         public double HalfPerimeter()

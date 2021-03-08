@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace FigureLib
+namespace ObjectsLib
 {
    public class Square:Figure
     {
@@ -31,7 +31,7 @@ namespace FigureLib
 
         public override string ToString()
         {
-            return "Квадрат со стороной " + this.A ;
+            return "Квадрат со стороной: " + this.A ;
         }
     }
 }
