@@ -81,17 +81,11 @@ namespace Tests
                 }
                 return true; 
             }
-            else throw new ArgumentException("Передаваемый масси объектов не должен быть null.");
+            else throw new ArgumentException("Передаваемый массив объектов не должен быть null.");
         }
 
         private void PrintArray(ParametersOfSort parametr)
         {
-            if (parametr==null)
-            {
-                throw new ArgumentException("Вывод без параметра недоступен!");
-            }
-            else
-            {
                 foreach (var figure in _figuresArray)
                 {
                     if (parametr == ParametersOfSort.Area)
@@ -104,7 +98,6 @@ namespace Tests
                     }
                 }
                 Console.WriteLine();
-            }
         }
 
         [TestInitialize]
