@@ -32,7 +32,7 @@ namespace Tests
         {
             for (int i = 0; i < 100; i++)
             {
-                _notes[i] = new Note(GenerateAction(), i + 1, GenerateDate());
+                _notes[i] = new Note(GenerateAction(), i + 1, GenerateDate(), GenerateBool());
             }
         }
 
@@ -48,6 +48,11 @@ namespace Tests
             return start.AddDays(_rand.Next(range));
         }
 
+        private bool GenerateBool()
+        {
+            return _rand.Next(0, 2) > 0;
+        }
+
         [TestInitialize]
         public void Initialization()
         {
@@ -59,9 +64,7 @@ namespace Tests
         {
             DateTime dateFilter = GenerateDate();
 
-            var selectedNotes = from note in _notes
-                                where note.Date.ToShortDateString() == dateFilter.ToShortDateString()
-                                select note;
+            var selectedNotes = _notes.Where(note => note.Date == dateFilter);
 
             Console.WriteLine("Все заметки за {0}:", dateFilter.ToShortDateString());
             foreach (var note in selectedNotes)
@@ -73,10 +76,7 @@ namespace Tests
         [TestMethod]
         public void FindFirstTenNotesInAlphabeticalOrderTest()
         {
-            var selectedNotes2 = from note in _notes
-                                 where note.SerialNumber <= 10
-                                 orderby note.Text
-                                 select note;
+            var selectedNotes2 = _notes.Where(note => note.SerialNumber <= 10).OrderBy(note => note.Text);
 
             Console.WriteLine("\n\nПервые 10 заметок в алфавитном порядке: ");
             foreach (var note in selectedNotes2)
@@ -86,10 +86,12 @@ namespace Tests
         }
 
         [TestMethod]
-        public void SumSerialNumbersTest()
+        public void SumIsCompletedTest()
         {
-            var sumSeriesNumbers = _notes.Sum(note => note.SerialNumber);
-            Console.WriteLine("\n\nСумма порядковых номеров всех ста заметок: {0}",sumSeriesNumbers);
+            var countIsCompleted = _notes.Sum(note => Convert.ToInt16(note.IsCompleted));
+            Console.WriteLine("\n\nКоличество выполненных заметок: {0}", countIsCompleted);
+            var expected = _notes.Where(note => note.IsCompleted == true).Count();
+            Assert.AreEqual(expected, countIsCompleted);
         }
 
         [TestMethod]
@@ -117,10 +119,7 @@ namespace Tests
         [TestMethod]
         public void SortByDateTest()
         {
-            
-            var noteGroups = from note in _notes
-                             orderby note.Date
-                              group note by note.Date;
+            var noteGroups = _notes.OrderBy(note => note.Date).GroupBy(note => note.Date);
 
             Console.WriteLine("\nОтсортировано по дате:");
             foreach (IGrouping<DateTime, Note> note in noteGroups)
