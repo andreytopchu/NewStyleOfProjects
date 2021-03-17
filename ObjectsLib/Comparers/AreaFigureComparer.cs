@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace ObjectsLib
+namespace ObjectsLib.Comparers
 {
    public class AreaFigureComparer: IComparer<Figure>
     {

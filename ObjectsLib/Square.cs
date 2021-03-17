@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ObjectsLib
 {
-   public class Square:Figure
+    public class Square:Figure
     {
         public double A { get; private set; }
 
