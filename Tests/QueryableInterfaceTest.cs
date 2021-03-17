@@ -1,16 +1,14 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ObjectsLib;
+using System;
+using System.Linq;
 
 namespace Tests
 {
     [TestClass]
     public class QueryableInterfaceTest
     {
-        private string[] _actions = new string[]
+        private readonly string[] _actions = new string[]
         {
             " Написать тест ",
             " Сделать уборку ", 
@@ -60,13 +58,13 @@ namespace Tests
         }
 
         [TestMethod]
-        public void DateSearch()
+        public void SearchByDateTest()
         {
-            DateTime dateFilter = GenerateDate();
+            DateTime randomDate = GenerateDate();
 
-            var selectedNotes = _notes.Where(note => note.Date == dateFilter);
+            var selectedNotes = _notes.Where(note => note.Date == randomDate);
 
-            Console.WriteLine("Все заметки за {0}:", dateFilter.ToShortDateString());
+            Console.WriteLine("Все заметки за {0}:", randomDate.ToShortDateString());
             foreach (var note in selectedNotes)
             {
                 Console.WriteLine(note.ToString());

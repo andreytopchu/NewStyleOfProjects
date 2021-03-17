@@ -1,9 +1,7 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ObjectsLib;
+using ObjectsLib.Comparers;
+using System;
 
 namespace Tests
 {
@@ -37,6 +35,7 @@ namespace Tests
                                 int b = rnd.Next(3, 9);
                                 int c = (int)(a + b) / 2;
                                 _figuresArray[i] = new Triangle(a, b, c);
+
                             }
                             catch (Exception)
                             {
@@ -110,6 +109,7 @@ namespace Tests
         public void SortByAreaTest()
         {
             SortByArea();
+            
             PrintArray(ParametersOfSort.Area);
             Assert.IsTrue(IsSorted(_figuresArray, ParametersOfSort.Area));
         }
