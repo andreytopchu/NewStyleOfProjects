@@ -7,12 +7,12 @@ namespace ObjectsLib
 {
     public class Person
     {
-        public string FirstName { get; set; }
-        public string SecondName { get; set; }
-        public string Patronymic { get; set; }
-        public DateTime DateOfBirth { get; set; }
-        public string PlaceOfBirth { get; set; }
-        public string NumberOfPassport { get; set; }
+        public string FirstName { get; private set; }
+        public string SecondName { get; private set; }
+        public string Patronymic { get; private set; }
+        public DateTime DateOfBirth { get; private set; }
+        public string PlaceOfBirth { get; private set; }
+        public string NumberOfPassport { get; private set; }
 
         public Person(string secondName, string firstName, string patronymic, DateTime dateOfBirth, string placeOfBirth, string numberOfPassport) 
         {
@@ -90,7 +90,7 @@ namespace ObjectsLib
 
         public override int GetHashCode()
         {
-            return (SecondName + FirstName + Patronymic + DateOfBirth + PlaceOfBirth + NumberOfPassport).GetHashCode();
+            return (SecondName + FirstName + Patronymic + DateOfBirth.ToShortDateString() + PlaceOfBirth + NumberOfPassport).GetHashCode();
         }
 
         public static bool operator == (Person p1, Person p2) => p1.Equals(p2);
