@@ -92,11 +92,11 @@ namespace Tests
         private void FixedTimeOfAddAndContainsToDictionary(int countOfElements)
         {
             Dictionary<Person, string> referenceBookOfPersons = GeneratePersonsDictionary(countOfElements);
-            Console.WriteLine("Время, затраченное на добавление " + countOfElements + " элементов c генерированным хешем: " + stopwatch.ElapsedTicks + " тактов");
+            Console.WriteLine("Время, затраченное на добавление " + countOfElements + " элементов c генерированным хешем: " + stopwatch.ElapsedMilliseconds + " миллисекунд");
             Console.WriteLine();
 
             Dictionary<PersonWithHashCodeConst, string> referenceBookOfPersonsWithHashCodeConst = GeneratePersonsWithHashCodeConstDictionary(countOfElements);
-            Console.WriteLine("Время, затраченное на добавление " + countOfElements + " элементов с хешем-const: " + stopwatch.ElapsedTicks + " тактов");
+            Console.WriteLine("Время, затраченное на добавление " + countOfElements + " элементов с хешем-const: " + stopwatch.ElapsedMilliseconds + " миллисекунд");
 
             Dictionary<Person, string>.KeyCollection keys = referenceBookOfPersons.Keys;
             Person[] keysMass = new Person[keys.Count];
@@ -105,7 +105,7 @@ namespace Tests
 
             Person person1 = keysMass[randomIndex1];
             IsContainsInDictionary(referenceBookOfPersons, person1);
-            Console.WriteLine("Время, затраченное на поиск элемента в словаре с " + countOfElements + " элементов с генерированным хешем: " + stopwatch.ElapsedTicks + " тактов");
+            Console.WriteLine("Время, затраченное на поиск элемента в словаре с " + countOfElements + " элементов с генерированным хешем: " + stopwatch.ElapsedMilliseconds + " миллисекунд");
 
             Dictionary<PersonWithHashCodeConst, string>.KeyCollection keysOfBadCollection = referenceBookOfPersonsWithHashCodeConst.Keys;
             PersonWithHashCodeConst[] keysOfBadCollectionMass = new PersonWithHashCodeConst[keysOfBadCollection.Count];
@@ -114,7 +114,7 @@ namespace Tests
 
             PersonWithHashCodeConst person2 = keysOfBadCollectionMass[randomIndex2];
             IsContainsInBadDictionary(referenceBookOfPersonsWithHashCodeConst, person2);
-            Console.WriteLine("Время, затраченное на поиск элемента в словаре с " + countOfElements + " элементов с хешем-const: " + stopwatch.ElapsedTicks + " тактов");
+            Console.WriteLine("Время, затраченное на поиск элемента в словаре с " + countOfElements + " элементов с хешем-const: " + stopwatch.ElapsedMilliseconds + " миллисекунд");
         }
 
         [TestMethod]
