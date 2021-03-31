@@ -4,7 +4,7 @@ namespace ObjectsLib
 {
     public class Square:Figure
     {
-        public double A { get; private set; }
+        public double A;
 
         public Square(double a)
         {

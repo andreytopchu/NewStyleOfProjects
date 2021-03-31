@@ -73,13 +73,14 @@ namespace Tests
         [TestMethod]
         public void GenerateUniqueCollectionWithNotUniqueDoubleItemsTest()
         {
-            UniqueCollection<double> uniqueCollection = new UniqueCollection<double>();
-
-            uniqueCollection.Add(12.12);
-            uniqueCollection.Add(5.5);
-            uniqueCollection.Add(6.3);
-            uniqueCollection.Add(2.2);
-            uniqueCollection.Add(5.5);
+            UniqueCollection<double> uniqueCollection = new UniqueCollection<double>
+            {
+                12.12,
+                5.5,
+                6.3,
+                2.2,
+                5.5
+            };
 
             List<double> list = new List<double>() { 12.12, 5.5, 6.3, 2.2 };
 
