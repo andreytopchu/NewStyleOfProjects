@@ -14,6 +14,7 @@ namespace ObjectsLib
         private string _secondName;
         private string _patronymic;
         private DateTime _dateOfBirth;
+        private string _dateOfBirthInString;
         private string _placeOfBirth;
         private string _numberOfPassport;
 
@@ -72,6 +73,21 @@ namespace ObjectsLib
             }
         }
 
+        public string DateOfBirthInString
+        {
+            get { return _dateOfBirthInString; }
+            set
+            {
+                if (value != _dateOfBirthInString)
+                {
+                    if (value == "" || value == null)
+                        throw new ArgumentException("Дата рождения не может быть пустой строкой или null");
+                    _dateOfBirthInString = value;
+                    NotifyPropertyChanged();
+                }
+            }
+        }
+
         public string PlaceOfBirth
         {
             get { return _placeOfBirth; }
@@ -108,6 +124,17 @@ namespace ObjectsLib
             SecondName = secondName;
             Patronymic = patronymic;
             DateOfBirth = dateOfBirth;
+            PlaceOfBirth = placeOfBirth;
+            NumberOfPassport = numberOfPassport;
+        }
+
+        public Person(string secondName, string firstName, string patronymic, string dateOfBirthInString, string placeOfBirth, string numberOfPassport)
+        {
+
+            FirstName = firstName;
+            SecondName = secondName;
+            Patronymic = patronymic;
+            DateOfBirthInString = dateOfBirthInString;
             PlaceOfBirth = placeOfBirth;
             NumberOfPassport = numberOfPassport;
         }
@@ -157,6 +184,13 @@ namespace ObjectsLib
             {
                 Console.Write("\nНомер паспорта: " + NumberOfPassport);
             }
+        }
+
+        public override string ToString()
+        {
+            return " Фамилия: " + SecondName + " Имя: " + FirstName + " Отчество: " 
+                + Patronymic + " Дата рождения: " + DateOfBirth.ToShortDateString() + 
+                " Место рождения: " + PlaceOfBirth + " Номер паспорта: " + NumberOfPassport + " ";
         }
 
         public override bool Equals(object obj)
