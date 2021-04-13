@@ -119,7 +119,6 @@ namespace ObjectsLib
 
         public Person(string secondName, string firstName, string patronymic, DateTime dateOfBirth, string placeOfBirth, string numberOfPassport) 
         {
-
             FirstName = firstName;
             SecondName = secondName;
             Patronymic = patronymic;
@@ -128,16 +127,6 @@ namespace ObjectsLib
             NumberOfPassport = numberOfPassport;
         }
 
-        public Person(string secondName, string firstName, string patronymic, string dateOfBirthInString, string placeOfBirth, string numberOfPassport)
-        {
-
-            FirstName = firstName;
-            SecondName = secondName;
-            Patronymic = patronymic;
-            DateOfBirthInString = dateOfBirthInString;
-            PlaceOfBirth = placeOfBirth;
-            NumberOfPassport = numberOfPassport;
-        }
 
         public Person(string secondName, string firstName, string patronymic, DateTime dateOfBirth, string placeOfBirth)
         {

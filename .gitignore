@@ -9,3 +9,4 @@ TestResults
 *.trx
 /.vs/TwoLayersSolution/v15/Server/sqlite3
 /.vs/TwoLayersSolution/v15
+/packages/System.ValueTuple.4.5.0

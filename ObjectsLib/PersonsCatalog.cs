@@ -36,36 +36,37 @@ namespace ObjectsLib
             {
                 _personsDictionary.Add(person.GetHashCode(), person);
             }
-            else
-                throw new InvalidOperationException("Данный человек уже содержится в каталоге. Невозможно выполнить добавление.");
+            else 
+                throw new PersonAlreadyExistsException("Данный человек уже содержится в каталоге. Невозможно выполнить добавление.",person);
         }
 
         public void DeletePerson(Person person)
         {
             if (person == null)
                 throw new ArgumentNullException("Невозможно произвести удаление. Человек не может быть null.");
-            if (_personsDictionary.ContainsKey(person.GetHashCode()))
+            if (IsContainsInDictionary(person))
             {
                 _personsDictionary.Remove(person.GetHashCode());
-
             }
             else
-                throw new InvalidOperationException("Данного человека нет в каталоге. Невозможно выполнить удаление.");
+                throw new PersonDoesNotExistException("Данного человека нет в каталоге. Невозможно выполнить удаление.", person);
         }
 
         public Person GetPerson(int key)
         {
             if (_personsDictionary.ContainsKey(key)) return _personsDictionary[key];
-            else throw new ArgumentException("В справочнике нет человека с таким ключом.");
+            else throw new PersonDoesNotExistException("В справочнике нет человека с данным ключом.");
         }
 
         public void Save()
         {
+            Path.Combine();
             var path = Directory.GetCurrentDirectory();
             using (var file = new StreamWriter(path + @"/PersonsCatalog.txt"))
             {
                 foreach (var person in _personsDictionary)
                     file.WriteLine("{0} {1}", person.Key, person.Value.ToString());
+                file.Flush();
             }
             Console.WriteLine("Каталог сохранен в файл.");
         }
@@ -91,8 +92,9 @@ namespace ObjectsLib
                     Console.WriteLine("Ошибка при чтении файла. " + e);
                 }
             }
+        }
 
-            Tuple<int, Person> ParseLine(string line)
+           private static (int, Person) ParseLine(string line)
             {
                 var words = line.Split(' ');
                 var date = words[10].Split('.');
@@ -105,8 +107,9 @@ namespace ObjectsLib
                     words[13],
                     words[16]
                     );
-                return new Tuple<int, Person>(Int32.Parse(words[0]), person);
+                var result = (key: int.Parse(words[0]), person: person);
+                return result;
             }
-        }
+        
     }
 }

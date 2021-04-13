@@ -8,7 +8,7 @@ namespace ObjectsLib
 {
     public class MyDelegateClass
     {
-        List<MethodInfo> methodList = new List<MethodInfo>();
+        readonly List<MethodInfo> methodList = new List<MethodInfo>();
 
 
         public MyDelegateClass()

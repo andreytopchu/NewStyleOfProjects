@@ -14,7 +14,7 @@ namespace ObjectsLib
         public delegate void IsNumberDifferenceNotifier(string notify);
         public event IsNumberDifferenceNotifier BigDifferenceEvent;
 
-        private double _averageValue;
+        private readonly double _averageValue;
 
         public NumberAnalyzer(Collection<double> numbersStream)
         {

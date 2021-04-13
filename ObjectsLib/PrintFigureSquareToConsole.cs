@@ -13,12 +13,17 @@ namespace ObjectsLib
 
         public void PrintFigureAreaToConsoleWithCreareEvent(T figure)
         {
+            if (figure == null)
+            {
+                throw new ArgumentNullException(nameof(figure));
+            }
+
             if (Notify == null)
                 Notify += PrintMessage;
 
             Notify?.Invoke("Площадь фигуры: " + figure.CalcArea());
         }
-
+        //метод raise
         private void PrintMessage(string message)
         {
             Console.WriteLine(message);

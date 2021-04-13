@@ -12,10 +12,18 @@ namespace Tests
         public void SaveAndLoadTest()
         {
             PersonsCatalog personsCatalog = new PersonsCatalog();
-
-            for (int i = 0; i < 25; i++)
+            try
             {
-                personsCatalog.AddPerson(new Person());
+                for (int i = 0; i < 25; i++)
+                {
+                    personsCatalog.AddPerson(new Person());
+                }
+
+            }
+            catch (PersonAlreadyExistsException ex)
+            {
+                Console.WriteLine(ex.Message + "\nОшибка при попытке повторного добавления человека: " + ex.Person);
+                throw;
             }
 
             personsCatalog.Save();
@@ -23,16 +31,30 @@ namespace Tests
             Assert.AreEqual(25, personsCatalog.Count());
         }
 
-        [ExpectedException(typeof(InvalidOperationException))]
+        [ExpectedException(typeof(PersonAlreadyExistsException))]
         [TestMethod]
         public void TryAddingNotUniquePersonTest()
         {
             PersonsCatalog personsCatalog = new PersonsCatalog();
 
             Person person = new Person();
+            try
+            {
+                personsCatalog.AddPerson(person);
+                personsCatalog.AddPerson(person);
+            }
+            catch (PersonAlreadyExistsException ex)
+            {
+                Console.WriteLine(ex.Message+"\nОшибка при попытке повторного добавления человека: "+ex.Person);
+                throw;
+            }
+        }
 
-            personsCatalog.AddPerson(person);
-            personsCatalog.AddPerson(person);
+        [TestMethod]
+        public void SavePersonToHtmlFilesTest()
+        {
+            Person person = new Person();
+            person.PrintPersonToHtml();
         }
     }
 }
