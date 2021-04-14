@@ -9,9 +9,7 @@ namespace ObjectsLib
 {
     public class MyDelegate
     {
-        private List<MethodInfo> _listOfMethods;
-
-        public List<MethodInfo> ListOfMethods;
+        public List<MethodInfo> ListOfMethods { get; private set; }
 
         public ParametersAndType SignatureOfFunction;
 
@@ -19,7 +17,7 @@ namespace ObjectsLib
         {
             if (method == null) throw new ArgumentNullException(nameof(method));
 
-            _listOfMethods = new List<MethodInfo> { method };
+            ListOfMethods = new List<MethodInfo> { method };
             SignatureOfFunction = new ParametersAndType(method.GetParameters(), method.ReturnType);
         }
 
@@ -36,9 +34,9 @@ namespace ObjectsLib
         public void AddMethod(MethodInfo method)
         {
             if (method == null) throw new ArgumentNullException(nameof(method));
-            if (_listOfMethods.Count == 0)
+            if (ListOfMethods.Count == 0)
             {
-                _listOfMethods = new List<MethodInfo>();
+                ListOfMethods = new List<MethodInfo>();
                 SignatureOfFunction = new ParametersAndType(method.GetParameters(), method.ReturnType);
             }
             if (method.ReturnType != SignatureOfFunction.ReturnType || 
@@ -47,23 +45,18 @@ namespace ObjectsLib
                 throw new InvalidOperationException("Сигнатуры функций не совпадают");
             }
 
-            _listOfMethods.Add(method);
+            ListOfMethods.Add(method);
         }
 
         public static MyDelegate operator +(MyDelegate first, MyDelegate second)
         {
             if (first == null || second == null) throw new ArgumentNullException();
 
-            if (!first.SignatureOfFunction.Equals(second.SignatureOfFunction))
-            {
-                throw new InvalidOperationException("Сигнатуры функций не совпадают");
-            }
-
             if (first == second)
             {
                 var newList = new List<MethodInfo>();
                 newList = newList.Concat(first.ListOfMethods).ToList();
-                first._listOfMethods = newList.Concat(first.ListOfMethods).ToList();
+                first.ListOfMethods = newList.Concat(first.ListOfMethods).ToList();
                 return first;
             }
 
@@ -77,14 +70,10 @@ namespace ObjectsLib
 
         public static MyDelegate operator -(MyDelegate first, MyDelegate second)
         {
-            if (!first.SignatureOfFunction.Equals(second.SignatureOfFunction))
-            {
-                throw new InvalidOperationException("Сигнатуры функций не совпадают");
-            }
 
             if (first == second)
             {
-                first._listOfMethods.Clear();
+                first.ListOfMethods.Clear();
                 first.SignatureOfFunction.Clear();
             }
 
@@ -92,20 +81,17 @@ namespace ObjectsLib
 
             foreach (var methodInfoInSecond in second.ListOfMethods)
             {
-                foreach (var methodInfoInFirst in first.ListOfMethods)
-                {
-                    if (Equals(methodInfoInSecond, methodInfoInFirst)) first.ListOfMethods.Remove(methodInfoInFirst);
-                }
+                first.ListOfMethods.Remove(methodInfoInSecond);
             }
             return first;
         }
 
         public object Invoke(object classInstance, object[] parameters)
         {
-            if (_listOfMethods.Count == 0) return null;
+            if (ListOfMethods.Count == 0) return null;
             else
             {
-                foreach (var methodInfo in _listOfMethods)
+                foreach (var methodInfo in ListOfMethods)
                 {
                     try
                     {

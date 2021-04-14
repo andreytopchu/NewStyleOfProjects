@@ -15,14 +15,13 @@ namespace ObjectsLib
         public ParametersAndType(ParameterInfo[] parameterInfos, Type returnType)
         {
             if (parameterInfos == null) throw new ArgumentNullException();
-            if (returnType == null) throw new ArgumentNullException(nameof(returnType));
 
             Parameters = new ParameterInfo[parameterInfos.Length];
             for (int i = 0; i < parameterInfos.Length; i++)
             {
                 Parameters[i] = parameterInfos[i];
             }
-            ReturnType = returnType;
+            ReturnType = returnType ?? throw new ArgumentNullException(nameof(returnType));
         }
 
         public void Clear()
