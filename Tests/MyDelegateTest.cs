@@ -42,16 +42,13 @@ namespace Tests
             var devideMethodInfo = type.GetMethod(nameof(Divide));
 
             var myDelegate = new MyDelegate(devideMethodInfo);
-            myDelegate -= myDelegate;
             myDelegate += new MyDelegate(devideByZeroMethodInfo);
             myDelegate += new MyDelegate(devideByZeroMethodInfo);
             myDelegate += myDelegate;
             myDelegate += new MyDelegate(devideMethodInfo);
 
-            //double expected = 30;
-            //Assert.AreEqual(expected, myDelegate.Invoke(this, new object[] { 120, 4 }));
-            var result = myDelegate.Invoke(this, new object[] { 32, 10 });
-            Assert.AreEqual(3.2, (double)result);
+            var result = myDelegate.Invoke(this, new object[] { 3200, 10 });
+            Assert.AreEqual(320, (double)result);
             Console.WriteLine("Результат после исключений: " + result);
         }
     }
