@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Reflection;
 
 namespace ObjectsLib
@@ -43,6 +40,14 @@ namespace ObjectsLib
             if (ReferenceEquals(this, obj)) return true;
             if (obj.GetType() != this.GetType()) return false;
             return Equals((ParametersAndType)obj);
+        }
+
+        public override int GetHashCode()
+        {
+            var hashCode = 803715368;
+            hashCode = hashCode * -1521134295 + EqualityComparer<ParameterInfo[]>.Default.GetHashCode(Parameters);
+            hashCode = hashCode * -1521134295 + EqualityComparer<Type>.Default.GetHashCode(ReturnType);
+            return hashCode;
         }
     }
 }

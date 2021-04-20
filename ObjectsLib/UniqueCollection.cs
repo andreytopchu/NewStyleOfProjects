@@ -2,8 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
 
 namespace ObjectsLib
 {
@@ -22,7 +20,7 @@ namespace ObjectsLib
 
         public void Add(T data)
         {
-            if (data == null) throw new ArgumentNullException("Ошибка! Невозможно добавить в коллекцию элемент равный null.");
+            if (data == null) throw new ArgumentNullException(nameof(data));
 
             if (!_collection.Contains(data))
                 _collection.Add(data);

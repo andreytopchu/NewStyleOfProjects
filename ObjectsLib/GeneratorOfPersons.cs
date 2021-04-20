@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace ObjectsLib
 {
@@ -9,7 +7,7 @@ namespace ObjectsLib
     {
         private static Random _rand = new Random();
 
-        private static readonly string[] _placeOfWork = new string[]
+        private static readonly string[] PlaceOfWork = new string[]
         {
             " Зеленый рынок ",
             " Супермаркет Шериф ",
@@ -23,7 +21,7 @@ namespace ObjectsLib
             " Строительная компания ",
         };
 
-        private static readonly string[] _names = new string[]
+        private static readonly string[] Names = new string[]
         {
             " Андрей ",
             " Владимир ",
@@ -37,7 +35,7 @@ namespace ObjectsLib
             " Кирилл "
         };
 
-        private static readonly string[] _secondNames = new string[]
+        private static readonly string[] SecondNames = new string[]
         {
             " Иванов ",
             " Петров ",
@@ -51,7 +49,7 @@ namespace ObjectsLib
             " Игнатов  ",
         };
 
-        private static readonly string[] _patronymics = new string[]
+        private static readonly string[] Patronymics = new string[]
         {
             " Владимирович ",
             " Петрович ",
@@ -65,7 +63,7 @@ namespace ObjectsLib
             " Викторович  ",
         };
 
-        private static readonly string[] _placesOfBirth = new string[]
+        private static readonly string[] PlacesOfBirth = new string[]
         {
             " Тирасполь ",
             " Бендеры ",
@@ -81,34 +79,34 @@ namespace ObjectsLib
 
         public static string GeneratePlaceOfWork()
         {
-            return _placeOfWork[_rand.Next(0, _placeOfWork.Length)];
+            return PlaceOfWork[_rand.Next(0, PlaceOfWork.Length)];
         }
 
         public static string GenerateFirstName()
         {
-            return _names[_rand.Next(0, _names.Length)];
+            return Names[_rand.Next(0, Names.Length)];
         }
 
         public static string GenerateSecondName()
         {
-            return _secondNames[_rand.Next(0, _secondNames.Length)];
+            return SecondNames[_rand.Next(0, SecondNames.Length)];
         }
 
         public static string GeneratePatronymic()
         {
-            return _patronymics[_rand.Next(0, _patronymics.Length)];
+            return Patronymics[_rand.Next(0, Patronymics.Length)];
         }
 
         public static DateTime GenerateDate()
         {
             DateTime start = new DateTime(1950, 1, 1);
-            int range = ((TimeSpan)(new DateTime(2005, 1, 1) - start)).Days;
+            int range = (new DateTime(2005, 1, 1) - start).Days;
             return start.AddDays(_rand.Next(range));
         }
 
         public static string GeneratePlaceOfBirth()
         {
-            return _placesOfBirth[_rand.Next(0, _placesOfBirth.Length)];
+            return PlacesOfBirth[_rand.Next(0, PlacesOfBirth.Length)];
         }
 
         static HashSet<int> hs = new HashSet<int>();

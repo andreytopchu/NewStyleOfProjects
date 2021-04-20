@@ -3,7 +3,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ObjectsLib;
 using System.Collections;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 
 namespace Tests
 {
@@ -43,7 +42,7 @@ namespace Tests
             int expected = countOfElements;
             Assert.AreEqual(expected, actual);
 
-            Assert.IsTrue(CheckForNotRepetInTheCollection<Person>(uniqueCollection));
+            Assert.IsTrue(CheckForNotRepetInTheCollection(uniqueCollection));
         }
 
         [ExpectedException(typeof(ArgumentException))]
@@ -66,7 +65,7 @@ namespace Tests
             int expected = countOfElements;
             Assert.AreEqual(expected, actual);
 
-            CollectionAssert.AllItemsAreUnique((ICollection)uniqueCollection);
+            CollectionAssert.AllItemsAreUnique((ICollection) uniqueCollection);
         }
 
         [ExpectedException(typeof(ArgumentException))]

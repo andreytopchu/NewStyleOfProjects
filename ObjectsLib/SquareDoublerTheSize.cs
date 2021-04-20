@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObjectsLib
 {
@@ -22,7 +18,7 @@ namespace ObjectsLib
         {
             double sideA = _square.CalcPerimetr() / 4;
             Notify?.Invoke("Квадрат был увеличен вдвое.");
-            return new Square(sideA * 2); ;
+            return new Square(sideA * 2);
         }
     }
 }

@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel;
 using System.Collections.ObjectModel;
 
 namespace ObjectsLib
@@ -11,8 +6,8 @@ namespace ObjectsLib
     public class MyQueue<T> where T: new()
     {
         private Collection<T> _elements;
-        private int _front = 0;
-        private int count = 0;
+        private int _front;
+        private int _count;
         private readonly int _maxLenght;
 
         public delegate void QueueExceptionNotifier(string toNotify);
@@ -27,35 +22,38 @@ namespace ObjectsLib
             _maxLenght = maxLenght;
 
             _elements = new Collection<T>();
+
+            _front = 0;
+            _count = 0;
         }
 
         public void Enqueue(T item)
         {
-            if (count >= _maxLenght)
+            if (_count >= _maxLenght)
             {
-                QueueOverflow.Invoke("Очередь переполнена");
+                if (QueueOverflow != null) QueueOverflow.Invoke("Очередь переполнена");
                 throw new InvalidOperationException("Невозможно выполнить операцию, т.к. очередь пуста.");
             }
                 
             else
             {
                 _elements.Add(item);
-                count++;
+                _count++;
             }
         }
 
         public T Dequeue()
         {
-            if (count<=0)
+            if (_count<=0)
             {
-                QueueUnderflow.Invoke("Очередь пуста");
+                if (QueueUnderflow != null) QueueUnderflow.Invoke("Очередь пуста");
                 throw new InvalidOperationException("Невозможно выполнить операцию, т.к. очередь пуста.");
             }
             else
             {
                 T returnedElement = _elements[_front];
                 _front++;
-                count--;
+                _count--;
                 return returnedElement;
             }
                     

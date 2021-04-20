@@ -33,7 +33,7 @@ namespace Tests
                             {
                                 int a = rnd.Next(3, 9);
                                 int b = rnd.Next(3, 9);
-                                int c = (int)(a + b) / 2;
+                                int c = (a + b) / 2;
                                 _figuresArray[i] = new Triangle(a, b, c);
 
                             }

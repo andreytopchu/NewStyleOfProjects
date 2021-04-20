@@ -127,9 +127,8 @@ namespace Tests
             Person person = GeneratorOfPersons.GeneratePerson();
 
             bool actual = IsContainsInDictionary(referenceBook, person);
-            bool expected = false;
 
-            Assert.AreEqual(expected, actual, "Искомого человека нет в справочнике.");
+            Assert.AreEqual(false, actual, "Искомого человека нет в справочнике.");
         }
 
         [TestMethod]
@@ -147,9 +146,7 @@ namespace Tests
             Person person = keysMass[randomIndex];
             bool actual = IsContainsInDictionary(referenceBook, person);
 
-            bool expected = true;
-
-            Assert.AreEqual(expected, actual, "Искомый человек есть в справочнике.");
+            Assert.AreEqual(true, actual, "Искомый человек есть в справочнике.");
         }
 
         [TestMethod]

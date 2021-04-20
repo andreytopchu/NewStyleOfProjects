@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObjectsLib
 {
@@ -19,7 +15,7 @@ namespace ObjectsLib
         public NumberAnalyzer(Collection<double> numbersStream)
         {
             if (numbersStream == null)
-                throw new ArgumentNullException("Невозможно принять в анализатор несуществующую коллекцию.");
+                throw new ArgumentNullException(nameof(numbersStream));
             else
             {
                 _numbers = numbersStream;

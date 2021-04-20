@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ObjectsLib
 {
@@ -43,7 +40,7 @@ namespace ObjectsLib
         public void DeletePerson(Person person)
         {
             if (person == null)
-                throw new ArgumentNullException("Невозможно произвести удаление. Человек не может быть null.");
+                throw new ArgumentNullException(nameof(person));
             if (IsContainsInDictionary(person))
             {
                 _personsDictionary.Remove(person.GetHashCode());
@@ -65,7 +62,7 @@ namespace ObjectsLib
             using (var file = new StreamWriter(path + @"/PersonsCatalog.txt"))
             {
                 foreach (var person in _personsDictionary)
-                    file.WriteLine("{0} {1}", person.Key, person.Value.ToString());
+                    file.WriteLine("{0} {1}", person.Key, person.Value);
                 file.Flush();
             }
             Console.WriteLine("Каталог сохранен в файл.");

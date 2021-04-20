@@ -42,7 +42,7 @@ namespace Tests
         private DateTime GenerateDate()
         {
             DateTime start = new DateTime(2021, 2, 1);
-            int range = ((TimeSpan)(DateTime.Today - start)).Days;
+            int range = (DateTime.Today - start).Days;
             return start.AddDays(_rand.Next(range));
         }
 
@@ -88,7 +88,7 @@ namespace Tests
         {
             var countIsCompleted = _notes.Sum(note => Convert.ToInt16(note.IsCompleted));
             Console.WriteLine("\n\nКоличество выполненных заметок: {0}", countIsCompleted);
-            var expected = _notes.Where(note => note.IsCompleted == true).Count();
+            var expected = _notes.Where(note => note.IsCompleted).Count();
             Assert.AreEqual(expected, countIsCompleted);
         }
 

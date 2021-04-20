@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
 
 
 namespace ObjectsLib
@@ -154,10 +151,6 @@ namespace ObjectsLib
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        private static void DisplayMessage(string message)
-        {
-            Console.WriteLine(message);
-        }
 
         public void PrintInfo()
         {
@@ -199,8 +192,8 @@ namespace ObjectsLib
             return (SecondName + FirstName + Patronymic + DateOfBirth.ToShortDateString() + PlaceOfBirth + NumberOfPassport).GetHashCode();
         }
 
-        public static bool operator == (Person p1, Person p2) => p1.Equals(p2);
+        public static bool operator == (Person p1, Person p2) => !(p1 is null) && p1.Equals(p2);
 
-        public static bool operator !=(Person p1, Person p2) => !p1.Equals(p2);
+        public static bool operator !=(Person p1, Person p2) => !(p1 is null) && !p1.Equals(p2);
     }
 }
