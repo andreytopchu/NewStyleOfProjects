@@ -18,7 +18,7 @@ namespace ObjectsLib
 
         public double GetReadingProgress(int page)
         {
-            return CountOfPage / 100 * page;
+            return (double)page / CountOfPage * 100;
         }
     }
 }

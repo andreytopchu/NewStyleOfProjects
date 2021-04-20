@@ -2,5 +2,7 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=670f45d1_002D51f7_002D4ab7_002D96f2_002D967294dad5f4/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="WithIgnoreExceptionTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;MSTest::FB1D13C4-7BA0-47AD-B0B4-053B0E24B85C::.NETFramework,Version=v4.6.1::Tests.MyDelegateTest.WithIgnoreExceptionTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::FB1D13C4-7BA0-47AD-B0B4-053B0E24B85C::.NETFramework,Version=v4.6.1::Tests.ReflectionTest.ToCallMetodWithParametersTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::FB1D13C4-7BA0-47AD-B0B4-053B0E24B85C::.NETFramework,Version=v4.6.1::Tests.ReflectionTest.CreateClassTriangleTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
