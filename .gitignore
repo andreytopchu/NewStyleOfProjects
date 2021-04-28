@@ -1,13 +1,5 @@
-*.testsettings
-*.sln
-*.vsmdi
-*.csproj
-Properties
-obj
-bin
-TestResults
-*.trx
-/.vs/TwoLayersSolution/v15/Server/sqlite3
-/.vs/TwoLayersSolution/v15
-/packages/System.ValueTuple.4.5.0
-/Tests/PersonsInHtml
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/Tests/bin/Debug
