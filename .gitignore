@@ -3,3 +3,10 @@
 ################################################################################
 
 /Tests/bin/Debug
+/Tests/obj/Debug
+/TestResults
+/packages/System.ValueTuple.4.5.0/ref
+/packages/System.ValueTuple.4.5.0
+/ObjectsLib/obj/Debug
+/ObjectsLib/bin/Debug
+/.vs/TwoLayersSolution/v15
