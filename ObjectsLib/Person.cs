@@ -5,15 +5,15 @@ using System.Runtime.CompilerServices;
 
 namespace ObjectsLib
 {
+    [Serializable]
     public class Person: INotifyPropertyChanged
     {
-        private string _firstName;
-        private string _secondName;
-        private string _patronymic;
-        private DateTime _dateOfBirth;
-        private string _dateOfBirthInString;
-        private string _placeOfBirth;
-        private string _numberOfPassport;
+        public string _firstName;
+        public string _secondName;
+        public string _patronymic;
+        public DateTime _dateOfBirth;
+        public string _placeOfBirth;
+        public string _numberOfPassport;
 
         public string FirstName
         {
@@ -22,7 +22,7 @@ namespace ObjectsLib
             {
                 if (value != _firstName)
                 {
-                    if (value == "" || value == null)
+                    if (string.IsNullOrEmpty(value))
                         throw new ArgumentException("Имя не может быть пустой строкой или null");
                     _firstName = value;
                     NotifyPropertyChanged();
@@ -36,7 +36,7 @@ namespace ObjectsLib
             {
                 if (value != _secondName)
                 {
-                    if (value == "" || value == null)
+                    if (string.IsNullOrEmpty(value))
                         throw new ArgumentException("Фамилия не может быть пустой строкой или null");
                     _secondName = value;
                     NotifyPropertyChanged();
@@ -50,7 +50,7 @@ namespace ObjectsLib
             {
                 if (value != _patronymic)
                 {
-                    if (value == "" || value == null)
+                    if (string.IsNullOrEmpty(value))
                         throw new ArgumentException("Отчество не может быть пустой строкой или null");
                     _patronymic = value;
                     NotifyPropertyChanged();
@@ -70,20 +70,6 @@ namespace ObjectsLib
             }
         }
 
-        public string DateOfBirthInString
-        {
-            get { return _dateOfBirthInString; }
-            set
-            {
-                if (value != _dateOfBirthInString)
-                {
-                    if (value == "" || value == null)
-                        throw new ArgumentException("Дата рождения не может быть пустой строкой или null");
-                    _dateOfBirthInString = value;
-                    NotifyPropertyChanged();
-                }
-            }
-        }
 
         public string PlaceOfBirth
         {
@@ -92,7 +78,7 @@ namespace ObjectsLib
             {
                 if (value != _placeOfBirth)
                 {
-                    if (value == "" || value == null)
+                    if (string.IsNullOrEmpty(value))
                         throw new ArgumentException("Место рождения не может быть пустой строкой или null");
                     _placeOfBirth = value;
                     NotifyPropertyChanged();
@@ -106,7 +92,7 @@ namespace ObjectsLib
             {
                 if (value != _numberOfPassport)
                 {
-                    if (value == "" || value == null)
+                    if (string.IsNullOrEmpty(value))
                         throw new ArgumentException("Серия паспорта не может быть пустой строкой или null");
                     _numberOfPassport = value;
                     NotifyPropertyChanged();
@@ -145,6 +131,7 @@ namespace ObjectsLib
             _numberOfPassport = GeneratorOfPersons.GenerateNumberOfPassport();
         }
 
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
@@ -154,7 +141,7 @@ namespace ObjectsLib
 
         public void PrintInfo()
         {
-            Console.WriteLine("Данные о человеке:");
+            Console.WriteLine("\nДанные о человеке:");
 
             Console.Write("Имя: " + FirstName);
             Console.Write("\nФамилия: " + SecondName);
