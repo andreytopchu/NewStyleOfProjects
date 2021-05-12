@@ -196,7 +196,6 @@ namespace Tests
             baseOfPersons.SaveToBinary("peoples.dat");
             BaseDumper baseDumper = new BaseDumper();
             baseDumper.LoadFromXml("peoples.dat");
-            Assert.AreEqual(null, baseDumper.PersonsCatalog);
         }
     }
 }
