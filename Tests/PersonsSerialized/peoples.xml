@@ -1,0 +1,353 @@
+<?xml version="1.0"?>
+<ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Person>
+    <_firstName> Валерий </_firstName>
+    <_secondName> Сидоров </_secondName>
+    <_patronymic> Андреевич </_patronymic>
+    <_dateOfBirth>1996-11-24T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Тирасполь </_placeOfBirth>
+    <_numberOfPassport>I-ПР №641282</_numberOfPassport>
+    <FirstName> Валерий </FirstName>
+    <SecondName> Сидоров </SecondName>
+    <Patronymic> Андреевич </Patronymic>
+    <DateOfBirth>1996-11-24T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Тирасполь </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №641282</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Валерий </_firstName>
+    <_secondName> Шумило </_secondName>
+    <_patronymic> Сергеевич </_patronymic>
+    <_dateOfBirth>1954-04-15T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Красное </_placeOfBirth>
+    <_numberOfPassport>I-ПР №222423</_numberOfPassport>
+    <FirstName> Валерий </FirstName>
+    <SecondName> Шумило </SecondName>
+    <Patronymic> Сергеевич </Patronymic>
+    <DateOfBirth>1954-04-15T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Красное </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №222423</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Георгий </_firstName>
+    <_secondName> Кузнецов </_secondName>
+    <_patronymic> Андреевич </_patronymic>
+    <_dateOfBirth>1999-10-04T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Рыбница </_placeOfBirth>
+    <_numberOfPassport>I-ПР №672271</_numberOfPassport>
+    <FirstName> Георгий </FirstName>
+    <SecondName> Кузнецов </SecondName>
+    <Patronymic> Андреевич </Patronymic>
+    <DateOfBirth>1999-10-04T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Рыбница </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №672271</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Кирилл </_firstName>
+    <_secondName> Игнатов  </_secondName>
+    <_patronymic> Эдуардович </_patronymic>
+    <_dateOfBirth>1966-07-02T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Красное </_placeOfBirth>
+    <_numberOfPassport>I-ПР №136299</_numberOfPassport>
+    <FirstName> Кирилл </FirstName>
+    <SecondName> Игнатов  </SecondName>
+    <Patronymic> Эдуардович </Patronymic>
+    <DateOfBirth>1966-07-02T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Красное </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №136299</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Кирилл </_firstName>
+    <_secondName> Кузнецов </_secondName>
+    <_patronymic> Леонидович </_patronymic>
+    <_dateOfBirth>1997-04-04T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Рыбница </_placeOfBirth>
+    <_numberOfPassport>I-ПР №460104</_numberOfPassport>
+    <FirstName> Кирилл </FirstName>
+    <SecondName> Кузнецов </SecondName>
+    <Patronymic> Леонидович </Patronymic>
+    <DateOfBirth>1997-04-04T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Рыбница </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №460104</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Кирилл </_firstName>
+    <_secondName> Петров </_secondName>
+    <_patronymic> Андреевич </_patronymic>
+    <_dateOfBirth>1968-10-08T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Дубоссары </_placeOfBirth>
+    <_numberOfPassport>I-ПР №916060</_numberOfPassport>
+    <FirstName> Кирилл </FirstName>
+    <SecondName> Петров </SecondName>
+    <Patronymic> Андреевич </Patronymic>
+    <DateOfBirth>1968-10-08T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Дубоссары </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №916060</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Дмитрий </_firstName>
+    <_secondName> Шумило </_secondName>
+    <_patronymic> Викторович  </_patronymic>
+    <_dateOfBirth>1999-08-13T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Григориополь </_placeOfBirth>
+    <_numberOfPassport>I-ПР №748679</_numberOfPassport>
+    <FirstName> Дмитрий </FirstName>
+    <SecondName> Шумило </SecondName>
+    <Patronymic> Викторович  </Patronymic>
+    <DateOfBirth>1999-08-13T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Григориополь </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №748679</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Кирилл </_firstName>
+    <_secondName> Давыдов </_secondName>
+    <_patronymic> Эдуардович </_patronymic>
+    <_dateOfBirth>1983-07-05T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Каменка </_placeOfBirth>
+    <_numberOfPassport>I-ПР №751007</_numberOfPassport>
+    <FirstName> Кирилл </FirstName>
+    <SecondName> Давыдов </SecondName>
+    <Patronymic> Эдуардович </Patronymic>
+    <DateOfBirth>1983-07-05T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Каменка </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №751007</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Георгий </_firstName>
+    <_secondName> Иванов </_secondName>
+    <_patronymic> Андреевич </_patronymic>
+    <_dateOfBirth>1972-06-09T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Копанка  </_placeOfBirth>
+    <_numberOfPassport>I-ПР №605655</_numberOfPassport>
+    <FirstName> Георгий </FirstName>
+    <SecondName> Иванов </SecondName>
+    <Patronymic> Андреевич </Patronymic>
+    <DateOfBirth>1972-06-09T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Копанка  </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №605655</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Владимир </_firstName>
+    <_secondName> Давыдов </_secondName>
+    <_patronymic> Васильевич </_patronymic>
+    <_dateOfBirth>1986-12-15T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Копанка  </_placeOfBirth>
+    <_numberOfPassport>I-ПР №243538</_numberOfPassport>
+    <FirstName> Владимир </FirstName>
+    <SecondName> Давыдов </SecondName>
+    <Patronymic> Васильевич </Patronymic>
+    <DateOfBirth>1986-12-15T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Копанка  </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №243538</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Анатолий </_firstName>
+    <_secondName> Шубин </_secondName>
+    <_patronymic> Владимирович </_patronymic>
+    <_dateOfBirth>1965-09-30T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Бендеры </_placeOfBirth>
+    <_numberOfPassport>I-ПР №736484</_numberOfPassport>
+    <FirstName> Анатолий </FirstName>
+    <SecondName> Шубин </SecondName>
+    <Patronymic> Владимирович </Patronymic>
+    <DateOfBirth>1965-09-30T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Бендеры </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №736484</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Георгий </_firstName>
+    <_secondName> Иванов </_secondName>
+    <_patronymic> Леонидович </_patronymic>
+    <_dateOfBirth>1995-08-17T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Тирасполь </_placeOfBirth>
+    <_numberOfPassport>I-ПР №262485</_numberOfPassport>
+    <FirstName> Георгий </FirstName>
+    <SecondName> Иванов </SecondName>
+    <Patronymic> Леонидович </Patronymic>
+    <DateOfBirth>1995-08-17T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Тирасполь </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №262485</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Александр </_firstName>
+    <_secondName> Иванов </_secondName>
+    <_patronymic> Эдуардович </_patronymic>
+    <_dateOfBirth>1988-11-12T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Суклея </_placeOfBirth>
+    <_numberOfPassport>I-ПР №664130</_numberOfPassport>
+    <FirstName> Александр </FirstName>
+    <SecondName> Иванов </SecondName>
+    <Patronymic> Эдуардович </Patronymic>
+    <DateOfBirth>1988-11-12T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Суклея </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №664130</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Александр </_firstName>
+    <_secondName> Сидоров </_secondName>
+    <_patronymic> Алексеевич </_patronymic>
+    <_dateOfBirth>1982-05-25T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Дубоссары </_placeOfBirth>
+    <_numberOfPassport>I-ПР №684413</_numberOfPassport>
+    <FirstName> Александр </FirstName>
+    <SecondName> Сидоров </SecondName>
+    <Patronymic> Алексеевич </Patronymic>
+    <DateOfBirth>1982-05-25T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Дубоссары </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №684413</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Александр </_firstName>
+    <_secondName> Шумило </_secondName>
+    <_patronymic> Алексеевич </_patronymic>
+    <_dateOfBirth>1961-01-14T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Слободзея </_placeOfBirth>
+    <_numberOfPassport>I-ПР №353689</_numberOfPassport>
+    <FirstName> Александр </FirstName>
+    <SecondName> Шумило </SecondName>
+    <Patronymic> Алексеевич </Patronymic>
+    <DateOfBirth>1961-01-14T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Слободзея </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №353689</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Георгий </_firstName>
+    <_secondName> Петров </_secondName>
+    <_patronymic> Сергеевич </_patronymic>
+    <_dateOfBirth>1993-03-28T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Каменка </_placeOfBirth>
+    <_numberOfPassport>I-ПР №771562</_numberOfPassport>
+    <FirstName> Георгий </FirstName>
+    <SecondName> Петров </SecondName>
+    <Patronymic> Сергеевич </Patronymic>
+    <DateOfBirth>1993-03-28T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Каменка </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №771562</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Дмитрий </_firstName>
+    <_secondName> Симоненко </_secondName>
+    <_patronymic> Владимирович </_patronymic>
+    <_dateOfBirth>1989-06-06T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Слободзея </_placeOfBirth>
+    <_numberOfPassport>I-ПР №693307</_numberOfPassport>
+    <FirstName> Дмитрий </FirstName>
+    <SecondName> Симоненко </SecondName>
+    <Patronymic> Владимирович </Patronymic>
+    <DateOfBirth>1989-06-06T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Слободзея </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №693307</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Валентин </_firstName>
+    <_secondName> Беляков </_secondName>
+    <_patronymic> Владимирович </_patronymic>
+    <_dateOfBirth>1983-10-24T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Рыбница </_placeOfBirth>
+    <_numberOfPassport>I-ПР №850821</_numberOfPassport>
+    <FirstName> Валентин </FirstName>
+    <SecondName> Беляков </SecondName>
+    <Patronymic> Владимирович </Patronymic>
+    <DateOfBirth>1983-10-24T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Рыбница </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №850821</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Андрей </_firstName>
+    <_secondName> Беляков </_secondName>
+    <_patronymic> Викторович  </_patronymic>
+    <_dateOfBirth>2000-09-07T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Тирасполь </_placeOfBirth>
+    <_numberOfPassport>I-ПР №676676</_numberOfPassport>
+    <FirstName> Андрей </FirstName>
+    <SecondName> Беляков </SecondName>
+    <Patronymic> Викторович  </Patronymic>
+    <DateOfBirth>2000-09-07T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Тирасполь </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №676676</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Кирилл </_firstName>
+    <_secondName> Шубин </_secondName>
+    <_patronymic> Петрович </_patronymic>
+    <_dateOfBirth>1961-07-30T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Каменка </_placeOfBirth>
+    <_numberOfPassport>I-ПР №660415</_numberOfPassport>
+    <FirstName> Кирилл </FirstName>
+    <SecondName> Шубин </SecondName>
+    <Patronymic> Петрович </Patronymic>
+    <DateOfBirth>1961-07-30T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Каменка </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №660415</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Валентин </_firstName>
+    <_secondName> Петров </_secondName>
+    <_patronymic> Андреевич </_patronymic>
+    <_dateOfBirth>1951-03-06T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Григориополь </_placeOfBirth>
+    <_numberOfPassport>I-ПР №873694</_numberOfPassport>
+    <FirstName> Валентин </FirstName>
+    <SecondName> Петров </SecondName>
+    <Patronymic> Андреевич </Patronymic>
+    <DateOfBirth>1951-03-06T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Григориополь </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №873694</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Валерий </_firstName>
+    <_secondName> Игнатов  </_secondName>
+    <_patronymic> Эдуардович </_patronymic>
+    <_dateOfBirth>1990-03-06T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Красное </_placeOfBirth>
+    <_numberOfPassport>I-ПР №714973</_numberOfPassport>
+    <FirstName> Валерий </FirstName>
+    <SecondName> Игнатов  </SecondName>
+    <Patronymic> Эдуардович </Patronymic>
+    <DateOfBirth>1990-03-06T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Красное </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №714973</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Валерий </_firstName>
+    <_secondName> Кузнецов </_secondName>
+    <_patronymic> Владимирович </_patronymic>
+    <_dateOfBirth>1980-02-07T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Бендеры </_placeOfBirth>
+    <_numberOfPassport>I-ПР №158327</_numberOfPassport>
+    <FirstName> Валерий </FirstName>
+    <SecondName> Кузнецов </SecondName>
+    <Patronymic> Владимирович </Patronymic>
+    <DateOfBirth>1980-02-07T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Бендеры </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №158327</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Александр </_firstName>
+    <_secondName> Игнатов  </_secondName>
+    <_patronymic> Владимирович </_patronymic>
+    <_dateOfBirth>1972-08-31T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Бендеры </_placeOfBirth>
+    <_numberOfPassport>I-ПР №831689</_numberOfPassport>
+    <FirstName> Александр </FirstName>
+    <SecondName> Игнатов  </SecondName>
+    <Patronymic> Владимирович </Patronymic>
+    <DateOfBirth>1972-08-31T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Бендеры </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №831689</NumberOfPassport>
+  </Person>
+  <Person>
+    <_firstName> Георгий </_firstName>
+    <_secondName> Беляков </_secondName>
+    <_patronymic> Петрович </_patronymic>
+    <_dateOfBirth>2003-10-15T00:00:00</_dateOfBirth>
+    <_placeOfBirth> Красное </_placeOfBirth>
+    <_numberOfPassport>I-ПР №921640</_numberOfPassport>
+    <FirstName> Георгий </FirstName>
+    <SecondName> Беляков </SecondName>
+    <Patronymic> Петрович </Patronymic>
+    <DateOfBirth>2003-10-15T00:00:00</DateOfBirth>
+    <PlaceOfBirth> Красное </PlaceOfBirth>
+    <NumberOfPassport>I-ПР №921640</NumberOfPassport>
+  </Person>
+</ArrayOfPerson>

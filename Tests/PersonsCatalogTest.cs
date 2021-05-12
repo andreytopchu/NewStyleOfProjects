@@ -1,7 +1,8 @@
-﻿using System;
-using System.IO;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json;
 using ObjectsLib;
+using System;
+using System.Runtime.Serialization;
 
 namespace Tests
 {
@@ -27,7 +28,7 @@ namespace Tests
             }
 
             baseOfPersons.Save();
-            baseOfPersons.Load(Directory.GetCurrentDirectory() + "/PersonsCatalog.txt");
+            baseOfPersons.Load();
             Assert.AreEqual(25, baseOfPersons.PersonsCatalog.Count());
         }
 
@@ -74,9 +75,10 @@ namespace Tests
                 throw;
             }
 
-            baseOfPersons.SaveToBinary();
-            baseOfPersons.LoadFromBinary();
-            Assert.AreEqual(25, baseOfPersons.PersonsCatalog.Count());
+            baseOfPersons.SaveToBinary("peoples.dat");
+            BaseDumper baseDumper = new BaseDumper();
+            baseDumper.LoadFromBinary("peoples.dat");
+            Assert.AreEqual(25, baseDumper.PersonsCatalog.Count());
         }
 
 
@@ -97,9 +99,10 @@ namespace Tests
                 throw;
             }
 
-            baseOfPersons.SaveToXml();
-            baseOfPersons.LoadFromXml();
-            Assert.AreEqual(25, baseOfPersons.PersonsCatalog.Count());
+            baseOfPersons.SaveToXml("peoples.xml");
+            BaseDumper baseDumper = new BaseDumper();
+            baseDumper.LoadFromXml("peoples.xml");
+            Assert.AreEqual(25, baseDumper.PersonsCatalog.Count());
         }
         [TestMethod]
         public void SerializedAndDeserializedPersonCatalogToJsonTest()
@@ -118,9 +121,82 @@ namespace Tests
                 throw;
             }
 
-            baseOfPersons.SaveToJson();
-            baseOfPersons.LoadFromJson();
-            Assert.AreEqual(25, baseOfPersons.PersonsCatalog.Count());
+            baseOfPersons.SaveToJson("peoples.dat");
+            BaseDumper baseDumper = new BaseDumper();
+            baseDumper.LoadFromJson("peoples.dat");
+            Assert.AreEqual(25, baseDumper.PersonsCatalog.Count());
+        }
+
+        [ExpectedException(typeof(JsonReaderException))]
+        [TestMethod]
+        public void TrySerializedBinaryAndDeserializedPersonCatalogToJsonTest()
+        {
+            BaseDumper baseOfPersons = new BaseDumper();
+            try
+            {
+                for (int i = 0; i < 25; i++)
+                {
+                    baseOfPersons.PersonsCatalog.AddPerson(new Person());
+                }
+            }
+            catch (PersonAlreadyExistsException ex)
+            {
+                Console.WriteLine(ex.Message + "\nОшибка при попытке повторного добавления человека: " + ex.Person);
+                throw;
+            }
+
+            baseOfPersons.SaveToBinary("peoples.dat");
+            BaseDumper baseDumper = new BaseDumper();
+            baseDumper.LoadFromJson("peoples.dat");
+            Assert.AreEqual(null, baseDumper.PersonsCatalog);
+        }
+
+        [ExpectedException(typeof(SerializationException))]
+        [TestMethod]
+        public void TrySerializedJsonAndDeserializedPersonCatalogToBinaryTest()
+        {
+            BaseDumper baseOfPersons = new BaseDumper();
+            try
+            {
+                for (int i = 0; i < 25; i++)
+                {
+                    baseOfPersons.PersonsCatalog.AddPerson(new Person());
+                }
+            }
+            catch (PersonAlreadyExistsException ex)
+            {
+                Console.WriteLine(ex.Message + "\nОшибка при попытке повторного добавления человека: " + ex.Person);
+                throw;
+            }
+
+            baseOfPersons.SaveToJson("peoples.dat");
+            BaseDumper baseDumper = new BaseDumper();
+            baseDumper.LoadFromBinary("peoples.dat");
+            Assert.AreEqual(null, baseDumper.PersonsCatalog);
+        }
+
+        [ExpectedException(typeof(InvalidOperationException))]
+        [TestMethod]
+        public void TrySerializedBinaryAndDeserializedPersonCatalogToXmlTest()
+        {
+            BaseDumper baseOfPersons = new BaseDumper();
+            try
+            {
+                for (int i = 0; i < 25; i++)
+                {
+                    baseOfPersons.PersonsCatalog.AddPerson(new Person());
+                }
+            }
+            catch (PersonAlreadyExistsException ex)
+            {
+                Console.WriteLine(ex.Message + "\nОшибка при попытке повторного добавления человека: " + ex.Person);
+                throw;
+            }
+
+            baseOfPersons.SaveToBinary("peoples.dat");
+            BaseDumper baseDumper = new BaseDumper();
+            baseDumper.LoadFromXml("peoples.dat");
+            Assert.AreEqual(null, baseDumper.PersonsCatalog);
         }
     }
 }

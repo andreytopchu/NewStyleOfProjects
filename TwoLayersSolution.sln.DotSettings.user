@@ -5,5 +5,7 @@
     &lt;TestId&gt;MSTest::FB1D13C4-7BA0-47AD-B0B4-053B0E24B85C::.NETFramework,Version=v4.6.1::Tests.ReflectionTest.ToCallMetodWithParametersTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::FB1D13C4-7BA0-47AD-B0B4-053B0E24B85C::.NETFramework,Version=v4.6.1::Tests.ReflectionTest.CreateClassTriangleTest&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;MSTest::FB1D13C4-7BA0-47AD-B0B4-053B0E24B85C::.NETFramework,Version=v4.6.1::Tests.PersonsCatalogTest.SerializedAndDeserializedPersonCatalogToXmlTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::FB1D13C4-7BA0-47AD-B0B4-053B0E24B85C::.NETFramework,Version=v4.6.1::Tests.PersonsCatalogTest.SaveAndLoadTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;MSTest::FB1D13C4-7BA0-47AD-B0B4-053B0E24B85C::.NETFramework,Version=v4.6.1::Tests.PersonsCatalogTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
